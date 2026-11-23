@@ -1,0 +1,14 @@
+test "sending a message gets an AI reply"
+  let messages = ChatService.send("Hello")
+  expect messages.count is 2
+  expect messages.last.role is "assistant"
+
+test "the chat page shows my message"
+  render Chat
+  type "Hello there" into "Type a message"
+  click "Send"
+  expect screen has "Hello there"
+
+test "a failed send does not leave half a conversation"
+  expect ChatService.send("") fails with "Type a message first"
+  expect ChatService.history().count is 0

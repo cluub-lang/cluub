@@ -1,0 +1,14 @@
+page About at "/about"
+  about "Explains how this starter is organized"
+  layout Main
+  view
+    heading "About this app"
+    text "Every Cluub app has the same shape, so anyone can find anything:"
+    list
+      item "models: the shape of your data and its rules"
+      item "data: stores that save models"
+      item "network: clients for outside APIs"
+      item "services: business logic (and AI)"
+      item "api: thin HTTP endpoints over services"
+      item "ui: pages, components and layouts"
+      item "tests: your tests (generated tests live in tests/generated)"

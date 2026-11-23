@@ -1,0 +1,172 @@
+{
+  "name": "cluub",
+  "scopeName": "source.cluub",
+  "fileTypes": [
+    "yti"
+  ],
+  "patterns": [
+    {
+      "include": "#comment"
+    },
+    {
+      "include": "#declaration"
+    },
+    {
+      "include": "#string"
+    },
+    {
+      "include": "#keyword"
+    },
+    {
+      "include": "#property"
+    },
+    {
+      "include": "#builtin"
+    },
+    {
+      "include": "#number"
+    },
+    {
+      "include": "#constant"
+    },
+    {
+      "include": "#view"
+    },
+    {
+      "include": "#type"
+    }
+  ],
+  "repository": {
+    "comment": {
+      "name": "comment.line.number-sign.cluub",
+      "match": "#.*$"
+    },
+    "declaration": {
+      "match": "^(app|model|store|client|service|api|page|component|layout|test)\\s+([A-Z][A-Za-z0-9]*)?",
+      "captures": {
+        "1": {
+          "name": "storage.type.cluub"
+        },
+        "2": {
+          "name": "entity.name.type.cluub"
+        }
+      }
+    },
+    "string": {
+      "patterns": [
+        {
+          "name": "string.quoted.triple.cluub",
+          "begin": "\"\"\"",
+          "end": "\"\"\"",
+          "patterns": [
+            {
+              "include": "#interpolation"
+            },
+            {
+              "include": "#escape"
+            }
+          ]
+        },
+        {
+          "name": "string.quoted.double.cluub",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "include": "#interpolation"
+            },
+            {
+              "include": "#escape"
+            }
+          ]
+        }
+      ]
+    },
+    "escape": {
+      "name": "constant.character.escape.cluub",
+      "match": "\\\\."
+    },
+    "interpolation": {
+      "name": "meta.interpolation.cluub",
+      "begin": "\\{",
+      "end": "\\}",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.section.interpolation.begin.cluub"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.section.interpolation.end.cluub"
+        }
+      },
+      "patterns": [
+        {
+          "include": "#keyword"
+        },
+        {
+          "include": "#number"
+        },
+        {
+          "include": "#constant"
+        }
+      ]
+    },
+    "keyword": {
+      "patterns": [
+        {
+          "name": "keyword.other.method.cluub",
+          "match": "^\\s+(get|post|put|patch|delete)\\b(?=\\s+[a-z])"
+        },
+        {
+          "name": "keyword.control.cluub",
+          "match": "\\b(if|else|for|in|while|return|try|catch|require|fail|let|expect|fails|render|click|type|into|go|to|log|when|loaded)\\b"
+        },
+        {
+          "name": "keyword.other.cluub",
+          "match": "\\b(uses|action|state|view|takes|about|holds|saved|at|with|header|title|slot|on|ask|ai|as|using|one|of|system|request|status|layout)\\b"
+        },
+        {
+          "name": "keyword.operator.word.cluub",
+          "match": "\\b(and|or|not|is|empty|has|equals|greater|less|more|fewer|than|least|most|plus|minus|times|divided|by)\\b"
+        },
+        {
+          "name": "keyword.operator.cluub",
+          "match": "->|=>|<=|>=|[=<>+\\-*/%]"
+        }
+      ]
+    },
+    "number": {
+      "name": "constant.numeric.cluub",
+      "match": "\\b\\d[\\d_]*(\\.\\d+)?\\b"
+    },
+    "constant": {
+      "name": "constant.language.cluub",
+      "match": "\\b(true|false|yes|no|nothing)\\b"
+    },
+    "view": {
+      "name": "support.function.element.cluub",
+      "match": "^\\s+(heading|subheading|text|button|input|checkbox|link|image|label|badge|item|select|row|column|card|box|header|footer|nav|section|grid|list|form|divider|spinner)\\b"
+    },
+    "type": {
+      "patterns": [
+        {
+          "name": "support.type.cluub",
+          "match": "\\b(text|number|bool|email|url|date|id|any|list)\\b(?=\\s*(,|=|\\?|$|\\)|of))"
+        },
+        {
+          "name": "entity.name.type.cluub",
+          "match": "\\b[A-Z][A-Za-z0-9]*\\b"
+        }
+      ]
+    },
+    "property": {
+      "name": "variable.parameter.property.cluub",
+      "match": "(?<=,)\\s*(placeholder|disabled|class|alt|style|multiline|options|type|to)\\b|\\b(placeholder|disabled|multiline|options)\\b"
+    },
+    "builtin": {
+      "name": "support.function.builtin.cluub",
+      "match": "\\b(now|today|round|text|number|uuid|json|random|sleep)(?=\\()|\\b(env|screen)\\b"
+    }
+  }
+}

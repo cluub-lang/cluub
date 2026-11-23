@@ -1,0 +1,2 @@
+app {{AppName}}
+  port 3000

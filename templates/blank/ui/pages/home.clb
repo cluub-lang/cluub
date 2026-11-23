@@ -1,0 +1,5 @@
+page Home at "/"
+  about "The first page of {{AppName}}"
+  view
+    heading "Hello from {{AppName}}"
+    text "Edit ui/pages/home.clb and save. The page reloads by itself."

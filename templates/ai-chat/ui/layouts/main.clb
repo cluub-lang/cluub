@@ -1,0 +1,5 @@
+layout Main
+  view
+    header
+      link "{{AppName}}" to "/"
+    slot

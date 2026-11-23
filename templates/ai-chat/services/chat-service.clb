@@ -1,0 +1,32 @@
+service ChatService
+  about "Talks to the AI and remembers the conversation"
+  uses Messages
+
+  action history() -> list of Message
+    return Messages.all()
+
+  action send(text: text) -> list of Message
+    about "Send a message and get the AI's reply"
+    require text is not empty, "Type a message first"
+    require text.count <= 4000, "Messages can be at most 4000 characters"
+    let transcript = Messages.all().map(m => "{m.role}: {m.content}")
+    transcript.add("user: {text}")
+    let reply = ask ai """
+      You are a friendly, concise assistant.
+      Conversation so far:
+      {transcript}
+      Reply to the last user message.
+      """
+    # Save both only after the AI answered, so a failed call leaves no half-finished turn
+    Messages.add(Message(role: "user", content: text))
+    Messages.add(Message(role: "assistant", content: reply))
+    return Messages.all()
+
+  action mood(text: text) -> Sentiment
+    about "Detect the mood of a message with structured AI output"
+    require text is not empty, "Nothing to analyze"
+    return ask ai "Classify the sentiment of: {text}" as Sentiment
+
+  action clear()
+    about "Start a new conversation"
+    Messages.clear()

@@ -1,0 +1,15 @@
+api ChatApi at "/api/chat"
+  about "Chat endpoints"
+  uses ChatService
+
+  get history at "/"
+    return ChatService.history()
+
+  post send at "/" with text: text
+    return ChatService.send(text)
+
+  post mood at "/mood" with text: text
+    return ChatService.mood(text)
+
+  delete clear at "/"
+    ChatService.clear()

@@ -1,0 +1,40 @@
+page Chat at "/"
+  about "Chat with the AI assistant"
+  title "Chat"
+  layout Main
+  uses ChatApi
+  state draft = ""
+  state messages = []
+  state thinking = false
+
+  when loaded
+    messages = ChatApi.history()
+
+  action send()
+    about "Send the message"
+    let text = draft
+    draft = ""
+    thinking = true
+    try
+      messages = ChatApi.send(text: text)
+    catch problem
+      thinking = false
+      draft = text
+      fail problem.message
+    thinking = false
+
+  action clear()
+    about "Start over"
+    ChatApi.clear()
+    messages = []
+
+  view
+    heading "Ask me anything"
+    for message in messages
+      Bubble message: message
+    if thinking
+      spinner
+    row
+      input draft, placeholder "Type a message", on enter send
+      button "Send", on click send, style primary, disabled draft is empty
+      button "New chat", on click clear, style ghost

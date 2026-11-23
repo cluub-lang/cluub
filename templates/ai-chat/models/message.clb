@@ -1,0 +1,10 @@
+model Message
+  about "One message in the conversation"
+  role: text, one of ["user", "assistant"]
+  content: text, required
+  sentAt: text = now()
+
+model Sentiment
+  about "How a message feels, extracted by AI"
+  mood: text, one of ["positive", "neutral", "negative"]
+  confidence: number, min 0, max 1

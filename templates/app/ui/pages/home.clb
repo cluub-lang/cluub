@@ -1,0 +1,49 @@
+page Home at "/"
+  about "The todo list: add, finish, delete and summarize todos"
+  title "Todos"
+  layout Main
+  uses TodoApi
+  state draft = ""
+  state priority = "normal"
+  state todos = []
+  state summary = ""
+
+  when loaded
+    todos = TodoApi.list()
+
+  action addTodo()
+    about "Add a todo"
+    TodoApi.add(title: draft, priority: priority)
+    draft = ""
+    todos = TodoApi.list()
+
+  action toggle(id: text)
+    about "Finish or reopen a todo"
+    TodoApi.toggle(id)
+    todos = TodoApi.list()
+
+  action remove(id: text)
+    about "Delete a todo"
+    TodoApi.remove(id)
+    todos = TodoApi.list()
+
+  action summarize()
+    about "Get an AI summary of open todos"
+    summary = TodoApi.summary()
+
+  view
+    heading "What needs doing?"
+    row
+      input draft, placeholder "Add a todo and press Enter", on enter addTodo
+      select priority, label "Priority", options ["low", "normal", "high"]
+      button "Add", on click addTodo, style primary, disabled draft is empty
+    for todo in todos
+      TodoItem todo: todo, onToggle: toggle, onRemove: remove
+    if todos is empty
+      text "Nothing here yet. Add your first todo above."
+    divider
+    row
+      button "Summarize with AI", on click summarize
+    if summary is not empty
+      card
+        text summary

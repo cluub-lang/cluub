@@ -1,0 +1,7 @@
+component Bubble
+  about "One chat message"
+  takes message: Message
+  view
+    card, class message.role
+      badge message.role
+      text message.content

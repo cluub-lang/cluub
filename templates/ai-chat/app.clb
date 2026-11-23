@@ -1,0 +1,4 @@
+app {{AppName}}
+  about "An AI chat assistant"
+  port 3000
+  ai "claude"

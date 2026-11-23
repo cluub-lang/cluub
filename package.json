@@ -1,0 +1,46 @@
+{
+  "name": "cluub",
+  "version": "0.1.0",
+  "description": "Cluub: one structured, AI-native language that clubs together frontend, backend and AI. Zero dependencies.",
+  "type": "module",
+  "bin": {
+    "cluub": "cli/cluub.js"
+  },
+  "files": [
+    "cli",
+    "compiler",
+    "runtime",
+    "templates",
+    "LANGUAGE.md",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node tests/run.js",
+    "docs:dev": "cd docs && npm run dev",
+    "docs:build": "cd docs && npm run build",
+    "binary": "bun build cli/cluub.js --compile --outfile bin/cluub"
+  },
+  "license": "MIT",
+  "exports": {
+    ".": "./compiler/index.js",
+    "./new": "./cli/new.js",
+    "./runtime/*": "./runtime/*",
+    "./package.json": "./package.json"
+  },
+  "homepage": "https://cluub.dev",
+  "keywords": [
+    "cluub",
+    "language",
+    "compiler",
+    "fullstack",
+    "frontend",
+    "backend",
+    "ai",
+    "llm",
+    "byok"
+  ]
+}

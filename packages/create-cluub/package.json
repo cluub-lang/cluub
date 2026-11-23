@@ -1,0 +1,13 @@
+{
+  "name": "create-cluub",
+  "version": "0.1.0",
+  "description": "Create a new Cluub app: npm create cluub@latest",
+  "type": "module",
+  "bin": { "create-cluub": "index.js" },
+  "files": ["index.js", "README.md"],
+  "dependencies": { "cluub": "^0.1.0" },
+  "engines": { "node": ">=18" },
+  "homepage": "https://cluub.dev",
+  "keywords": ["cluub", "create", "scaffold", "fullstack", "ai"],
+  "license": "MIT"
+}
