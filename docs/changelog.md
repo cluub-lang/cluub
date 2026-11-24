@@ -2,6 +2,11 @@
 
 All notable changes to Cluub are documented here. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and Cluub uses [Semantic Versioning](https://semver.org/spec/v2.0.0.html). Before 1.0, minor versions may contain breaking changes to the language. Breaking changes will always be listed under **Changed** with a migration note.
 
+## [Unreleased]
+
+### Fixed
+- Docs: all text now meets WCAG AA contrast (4.5 : 1) in light and dark mode. Diagrams keep a light background in dark mode, code uses GitHub's higher-contrast themes, and the playground's line numbers and labels are easier to read.
+
 ## [0.1.0-beta.1] - 2026-11-24
 
 First public beta.

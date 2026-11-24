@@ -38,14 +38,14 @@ Cluub uses the **Okabe–Ito palette**, a set of colours designed to stay distin
 <div class="brand-swatches">
   <div style="background:#0072B2;color:#fff"><b>Blue #0072B2</b><br>Brand colour, cat face</div>
   <div style="background:#E69F00;color:#1E293B"><b>Orange #E69F00</b><br>Nose, whiskers</div>
-  <div style="background:#009E73;color:#fff"><b>Green #009E73</b><br>Accents</div>
+  <div style="background:#009E73;color:#0B1220"><b>Green #009E73</b><br>Accents</div>
   <div style="background:#1E293B;color:#fff"><b>Ink #1E293B</b><br>Letters, text</div>
   <div style="background:#56B4E9;color:#0B1220"><b>Sky #56B4E9</b><br>Brand colour on dark</div>
   <div style="background:#CC79A7;color:#1E293B"><b>Reddish purple #CC79A7</b><br>AI in diagrams</div>
   <div style="background:#A84B00;color:#fff"><b>Deep vermillion #A84B00</b><br>Errors (shade of #D55E00)</div>
 </div>
 
-The same palette is used everywhere: the logo, this site, the diagrams, the playground and the default theme of every Cluub app. Text on a coloured background is white on blue and deep vermillion, and ink `#1E293B` on sky, green, orange and reddish purple, all at 4.3 : 1 or more.
+The same palette is used everywhere: the logo, this site, the diagrams, the playground and the default theme of every Cluub app. Text on a coloured background is white on blue and deep vermillion, ink `#1E293B` on sky, orange and reddish purple, and the darker ink `#0B1220` on green, all at 4.5 : 1 or more.
 
 | Token | Hex | Used for | Contrast (measured) |
 |---|---|---|---|

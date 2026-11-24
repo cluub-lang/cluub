@@ -22,7 +22,7 @@ export default defineConfig({
     ['meta', { property: 'og:image', content: 'https://cluub-lang.github.io/logo-full.svg' }],
   ],
   sitemap: { hostname: 'https://cluub-lang.github.io/' },
-  markdown: { languages: [cluubGrammar] },
+  markdown: { languages: [cluubGrammar], theme: { light: 'github-light-default', dark: 'github-dark-default' } },
   vite: { server: { fs: { allow: [path.resolve(here, '../..')] } } },
   themeConfig: {
     logo: { light: '/logo-full.svg', dark: '/logo-full-dark.svg', alt: 'Cluub' },
