@@ -64,5 +64,3 @@ Today Cluub renders its built-in elements (`button`, `card`, `row`, `input`…) 
 ### AI
 22. AI tools and agents with typed, permissioned access to service actions; streaming replies in the UI; usage and cost limits per user key.
 
-### Estimated timeline to 1.0
-With a small dedicated team (3–5 engineers plus design and QA): **beta hardening 3–4 months** (type checker, source maps, formatter, editor extension, auto-fix), **enterprise features 6–9 months** (databases, auth, UI kit, Docker/CI/CD/cloud), **stabilization and security audit 2–3 months**. A realistic first enterprise-ready **1.0 is 12–18 months** away; one developer working part-time should expect several years.
