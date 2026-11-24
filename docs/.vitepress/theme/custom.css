@@ -27,3 +27,4 @@ div.language-cluub { position: relative; }
 .brand-logos figure.on-light code, .brand-logos figure.on-dark code { background: transparent; color: inherit; }
 .brand-logos img { height: 72px; max-width: 100%; }
 .brand-logos figcaption { font-size: 13px; }
+.VPNavBarTitle .logo { height: 30px; width: auto; }

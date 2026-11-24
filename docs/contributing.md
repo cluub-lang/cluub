@@ -155,7 +155,7 @@ Cluub ships as two packages, both free on npm at the time of writing:
 
 | Package | Folder | Gives users |
 |---|---|---|
-| `cluub` | repository root | the `cluub` command, compiler and runtime (`npm install -g cluub`, `npx cluub`) |
+| `@cluub-lang/cluub` | repository root | the `cluub` command, compiler and runtime (`npm install -g @cluub-lang/cluub`, `npx cluub`) |
 | `create-cluub` | `packages/create-cluub/` | `npm create cluub@latest` (also pnpm, yarn and bun `create`) |
 
 Release steps (run by a maintainer with an npm account):

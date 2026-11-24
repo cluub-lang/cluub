@@ -1,6 +1,6 @@
 {
-  "name": "cluub",
-  "version": "0.1.0",
+  "name": "@cluub-lang/cluub",
+  "version": "0.1.0-beta.1",
   "description": "Cluub: one structured, AI-native language that clubs together frontend, backend and AI. Zero dependencies.",
   "type": "module",
   "bin": {

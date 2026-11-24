@@ -25,7 +25,8 @@ export default defineConfig({
   markdown: { languages: [cluubGrammar] },
   vite: { server: { fs: { allow: [path.resolve(here, '../..')] } } },
   themeConfig: {
-    logo: { light: '/logo.svg', dark: '/logo-dark.svg', alt: 'Cluub logo' },
+    logo: { light: '/logo-full.svg', dark: '/logo-full-dark.svg', alt: 'Cluub' },
+    siteTitle: false,
     nav: [
       { text: 'Guide', link: '/guide/introduction', activeMatch: '/guide/' },
       { text: 'Tutorial', link: '/tutorial/', activeMatch: '/tutorial/' },
@@ -33,6 +34,7 @@ export default defineConfig({
       { text: 'Reference', link: '/reference/language', activeMatch: '/reference/' },
       { text: 'Playground', link: '/playground' },
       { text: 'FAQ', link: '/faq' },
+      { text: 'v0.1 beta', link: '/changelog' },
       { text: 'More', items: [
         { text: 'Brand & logo', link: '/brand' },
         { text: 'Glossary', link: '/glossary' },
@@ -154,10 +156,13 @@ export default defineConfig({
         ] },
       ],
     },
-    socialLinks: [{ icon: 'github', link: 'https://github.com/cluub-lang/cluub' }],
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/cluub-lang/cluub' },
+      { icon: 'npm', link: 'https://www.npmjs.com/package/@cluub-lang/cluub', ariaLabel: 'Cluub on npm' },
+    ],
     editLink: { pattern: 'https://github.com/cluub-lang/cluub/edit/main/docs/:path', text: 'Edit this page on GitHub' },
     search: { provider: 'local' },
     outline: { level: [2, 3] },
-    footer: { message: 'MIT licensed · zero dependencies · bring your own AI key', copyright: 'Cluub 0.1 (prototype)' },
+    footer: { message: 'MIT licensed · zero dependencies · bring your own AI key', copyright: 'Cluub 0.1.0-beta.1' },
   },
 });

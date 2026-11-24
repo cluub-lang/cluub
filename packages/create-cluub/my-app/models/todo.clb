@@ -1,0 +1,5 @@
+model Todo
+  about "Something a user wants to get done"
+  title: text, required "Please type what needs doing", max 120
+  done: bool = false
+  priority: text = "normal", one of ["low", "normal", "high"]
