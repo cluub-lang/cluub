@@ -9,6 +9,8 @@ All notable changes to Cluub are documented here. The format follows [Keep a Cha
 - New logo: the **uu** of cluub are a cat's happy closed eyes. Brand colours stay Okabe–Ito (colour-blind safe), and every meaningful part of the logo has at least 3 : 1 contrast; the default app theme now uses the Cluub blue `#0072B2` (`#56B4E9` in dark mode).
 
 ### Added
+- Claude Code skills: 11 app skills (feature, backend, frontend, naming, tests, code review, PR review, fix issue, security, accessibility, debug) copied into every new project with a `CLAUDE.md`, plus 6 skills and a `CLAUDE.md` for contributors. See [Claude skills](/guide/ai-assistants).
+- Community files: `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `SECURITY.md`, issue and pull request templates, `CODEOWNERS`, Dependabot and `.editorconfig`.
 - `npm create cluub@latest` (also pnpm, yarn and bun `create`) via the new `create-cluub` package. New projects get a `package.json` with `dev`, `test`, `check`, `build` and `start` scripts.
 - Bring-your-own-key AI: the `cluub ai` command (`set`, `use`, `test`, `remove`, status) manages developer keys in `.env` (mode 600, git-ignored).
 - End-user keys: the `aiKeys` app setting (`"server"`, `"user"`, `"either"`), the built-in `aikey` view element and the `hasAiKey()` built-in. End-user keys stay in the browser, travel in `X-Cluub-AI-Provider` / `X-Cluub-AI-Key` headers, are scoped to one request with `AsyncLocalStorage`, and are never stored or logged.

@@ -71,6 +71,8 @@ Or let each user of your app bring theirs: set `aiKeys "user"` and add the built
 | `cli/` | the `cluub` command |
 | `packages/create-cluub/` | the `npm create cluub` package |
 | `templates/` | `app`, `ai-chat`, `blank` starters |
+| `skills/` | Claude skills copied into every new project (feature, backend, frontend, naming, tests, reviews, fixes, security, accessibility, debugging) |
+| `.claude/`, `CLAUDE.md` | Claude skills and rules for contributing to Cluub itself |
 | `docs/` | the [documentation site](https://cluub-lang.github.io/) (VitePress) with a live playground |
 | `editors/` | TextMate grammar for syntax highlighting |
 | `LANGUAGE.md` | the complete language reference (also what `cluub make` gives the AI) |

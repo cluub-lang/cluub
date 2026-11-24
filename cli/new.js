@@ -42,6 +42,24 @@ export function createProject(name, { template = 'app', cwd = process.cwd() } = 
     scripts: { dev: 'cluub dev', test: 'cluub test', build: 'cluub build', start: 'cluub start', check: 'cluub check' },
     devDependencies: { cluub: `^${VERSION}` },
   }, null, 2) + '\n');
+  // Claude skills and project rules, so every developer and AI tool works the same way.
+  const skills = path.join(HOME, 'skills');
+  if (fs.existsSync(skills)) fs.cpSync(skills, path.join(dest, '.claude', 'skills'), { recursive: true });
+  fs.writeFileSync(path.join(dest, 'CLAUDE.md'), `# ${appName}: guide for Claude and other AI assistants
+
+This is a Cluub app (\`.clb\` files). Language reference: https://cluub-lang.github.io/reference/language
+
+## Rules
+- Follow the folder layout and layers: page -> api -> service -> store / client / ai.
+- Run \`cluub check\` (no errors) and \`cluub test\` (all pass) after every change.
+- Every business rule and bug fix gets a test in \`tests/\`; never edit \`tests/generated/\`.
+- Never put API keys in code; use \`cluub ai set <provider>\`.
+- Commit messages follow Conventional Commits; don't push or open PRs without being asked.
+
+## Skills
+Use the skills in \`.claude/skills/\`: cluub-feature, cluub-backend, cluub-frontend, cluub-naming, cluub-tests,
+cluub-code-review, cluub-review-pr, cluub-fix-issue, cluub-security, cluub-accessibility, cluub-debug.
+`);
   const gi = path.join(dest, '.gitignore');
   const ignore = fs.existsSync(gi) ? fs.readFileSync(gi, 'utf8') : '';
   if (!/^node_modules\/?$/m.test(ignore)) fs.writeFileSync(gi, ignore + 'node_modules/\n');

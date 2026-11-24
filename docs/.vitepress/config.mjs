@@ -142,6 +142,7 @@ export default defineConfig({
         ] },
         { text: 'Teams', items: [
           { text: 'POs, BAs, QAs & AI', link: '/guide/team' },
+          { text: 'Claude skills', link: '/guide/ai-assistants' },
           { text: 'Voice coding', link: '/guide/voice' },
         ] },
         { text: 'More', items: [

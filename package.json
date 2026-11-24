@@ -7,13 +7,14 @@
     "cluub": "cli/cluub.js"
   },
   "files": [
+    "LANGUAGE.md",
+    "LICENSE",
+    "README.md",
     "cli",
     "compiler",
     "runtime",
-    "templates",
-    "LANGUAGE.md",
-    "README.md",
-    "LICENSE"
+    "skills",
+    "templates"
   ],
   "engines": {
     "node": ">=18"

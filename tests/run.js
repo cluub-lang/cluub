@@ -131,6 +131,27 @@ console.log('\nReference coverage');
   for (const [label, missing] of checks) missing.length ? bad(label, `missing: ${missing.join(', ')}`) : ok(label);
 }
 
+// Claude skills: valid frontmatter, and shipped into every new project.
+console.log('\nClaude skills');
+{
+  const os = await import('node:os');
+  const check = (dir, label) => {
+    const names = fs.existsSync(dir) ? fs.readdirSync(dir).filter((n) => fs.existsSync(path.join(dir, n, 'SKILL.md'))) : [];
+    const invalid = names.filter((n) => { const t = fs.readFileSync(path.join(dir, n, 'SKILL.md'), 'utf8'); return !new RegExp(`^---\\nname: ${n}\\ndescription: .{40,}\\n---\\n`).test(t); });
+    if (!names.length) invalid.push('(none found)');
+    invalid.length ? bad(`${label} have valid frontmatter`, `invalid: ${invalid.join(', ')}`) : ok(`${label}: ${names.length} skills with valid frontmatter`);
+    return names;
+  };
+  const appSkills = check(path.join(ROOT, 'skills'), 'app skills');
+  check(path.join(ROOT, '.claude/skills'), 'repo skills');
+  const { createProject } = await import('../cli/new.js');
+  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'cluub-skills-'));
+  const { dest } = createProject('skilltest', { template: 'blank', cwd: tmp });
+  const shipped = fs.readdirSync(path.join(dest, '.claude/skills'));
+  (shipped.length === appSkills.length && fs.existsSync(path.join(dest, 'CLAUDE.md'))) ? ok(`new projects get ${shipped.length} skills and CLAUDE.md`) : bad('new projects get the skills and CLAUDE.md', `got ${shipped.length}`);
+  fs.rmSync(tmp, { recursive: true, force: true });
+}
+
 console.log('\nRegressions');
 await runRegressions(ok, bad);
 

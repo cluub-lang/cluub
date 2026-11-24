@@ -1,0 +1,29 @@
+name: Bug report
+description: Something in Cluub doesn't work as documented
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Minimal .clb program or steps to reproduce
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Error output (from cluub check / test / dev)
+      render: text
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      placeholder: "cluub 0.1.0, Node 22, macOS 15"
+    validations:
+      required: true
