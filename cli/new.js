@@ -40,7 +40,7 @@ export function createProject(name, { template = 'app', cwd = process.cwd() } = 
   fs.writeFileSync(path.join(dest, 'package.json'), JSON.stringify({
     name: name.toLowerCase(), private: true, type: 'module',
     scripts: { dev: 'cluub dev', test: 'cluub test', build: 'cluub build', start: 'cluub start', check: 'cluub check' },
-    devDependencies: { cluub: `^${VERSION}` },
+    devDependencies: { '@cluub-lang/cluub': `^${VERSION}` },
   }, null, 2) + '\n');
   // Claude skills and project rules, so every developer and AI tool works the same way.
   const skills = path.join(HOME, 'skills');

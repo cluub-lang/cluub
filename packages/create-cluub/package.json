@@ -11,7 +11,7 @@
     "README.md"
   ],
   "dependencies": {
-    "cluub": "^0.1.0-beta.1"
+    "@cluub-lang/cluub": "^0.1.0-beta.1"
   },
   "engines": {
     "node": ">=18"

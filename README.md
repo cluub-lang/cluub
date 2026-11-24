@@ -49,7 +49,7 @@ npm install
 npm run dev
 ```
 
-Or install the command globally: `npm install -g cluub`, then `cluub new my-app`. Requires Node.js 18+.
+Or install the command globally: `npm install -g @cluub-lang/cluub`, then `cluub new my-app`. Requires Node.js 18+.
 
 ## Bring your own AI key
 

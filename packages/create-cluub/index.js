@@ -9,7 +9,7 @@ if (Number(versions.node.split('.')[0]) < 18) {
   exit(1);
 }
 const readline = await import('node:readline/promises');
-const { createProject, validateName, TEMPLATES, VERSION } = await import('cluub/new');
+const { createProject, validateName, TEMPLATES, VERSION } = await import('@cluub-lang/cluub/new');
 
 const useColor = stdout.isTTY && !env.NO_COLOR;
 const paint = (code) => (s) => (useColor ? `\x1b[${code}m${s}\x1b[0m` : s);

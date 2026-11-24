@@ -7,7 +7,7 @@ All notable changes to Cluub are documented here. The format follows [Keep a Cha
 First public beta.
 
 ### Changed
-- The language is now called **Cluub** (it *clubs* frontend, backend and AI). Files use the `.clb` extension, the command is `cluub`, and the npm packages are `cluub` and `create-cluub`. Environment variables use the `CLUUB_` prefix (for example `CLUUB_AI`).
+- The language is now called **Cluub** (it *clubs* frontend, backend and AI). Files use the `.clb` extension, the command is `cluub`, and the npm packages are `@cluub-lang/cluub` (the compiler and the `cluub` command) and `create-cluub`, both published to npm. Environment variables use the `CLUUB_` prefix (for example `CLUUB_AI`).
 - New logo: the **uu** of cluub are a cat's happy closed eyes. Brand colours stay Okabe–Ito (colour-blind safe), and every meaningful part of the logo has at least 3 : 1 contrast; the default app theme now uses the Cluub blue `#0072B2` (`#56B4E9` in dark mode).
 
 ### Added

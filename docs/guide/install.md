@@ -49,7 +49,7 @@ Every project has these scripts:
 ## Or install the `cluub` command globally
 
 ```bash
-npm install -g cluub
+npm install -g @cluub-lang/cluub
 cluub new my-app
 cd my-app
 cluub dev
@@ -57,8 +57,8 @@ cluub dev
 
 With the global command you can skip `npm install` in each project; inside a project, `npx cluub …` also works.
 
-::: tip Before the packages are published
-Until `cluub` and `create-cluub` are on npm, install from the source folder: run `npm link` inside the `cluub` folder, then use `cluub new my-app`.
+::: tip Working on Cluub itself
+To try a local copy of the compiler, run `npm link` inside the `cluub` repository folder, then use `cluub new my-app`.
 :::
 
 ## Templates

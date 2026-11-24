@@ -206,7 +206,7 @@ Use it for prototypes, internal tools and learning. If you deploy, follow the ch
 
 ### Is it on npm?
 
-The packages are ready to publish as **`cluub`** (the compiler and command) and **`create-cluub`** (for `npm create cluub@latest`). Until they're published, install from the source folder with `npm link` ([Install](/guide/install)).
+Yes. Two packages are published: **`@cluub-lang/cluub`** (the compiler, runtime and the `cluub` command) and **`create-cluub`** (for `npm create cluub@latest`). The main package is scoped because npm doesn't allow the plain name `cluub`, which it considers too close to existing packages; the command is still `cluub`. See [Install](/guide/install).
 
 ### Where is the documentation hosted?
 
