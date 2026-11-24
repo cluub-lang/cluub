@@ -8,7 +8,7 @@ Today a web feature means learning JavaScript, TypeScript, React, a router, a st
 
 **Cluub** *clubs together* the three things every modern app needs: the **frontend**, the **backend** and **AI**. Instead of three languages, three frameworks and the glue between them, you write one structured language and Cluub builds all three.
 
-The logo hides a small joke: the **uu** in the middle of *cluub* becomes a cat's smile, **ω**. Friendly, curious and quick is how Cluub should feel. See [Brand & logo](/brand).
+The logo hides a small joke: the **uu** in the middle of *cluub* becomes the happy closed eyes of a cat. Friendly, curious and quick is how Cluub should feel. See [Brand & logo](/brand).
 
 Cluub files end in **`.clb`**, the command is **`cluub`**, the code lives at **[github.com/cluub-lang/cluub](https://github.com/cluub-lang/cluub)** and these docs at **[cluub-lang.github.io](https://cluub-lang.github.io/)**.
 

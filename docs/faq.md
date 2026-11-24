@@ -33,7 +33,7 @@ Or install the command globally and use `cluub new my-app`. See [Install & first
 
 ### Why the name Cluub?
 
-Because it *clubs* frontend, backend and AI into one language. The logo hides the double **u** inside a cat: its smile, **ω**, is the *uu* of cluub. See [Brand & logo](/brand).
+Because it *clubs* frontend, backend and AI into one language. The logo hides the double **u** inside a cat: its happy closed eyes are the *uu* of cluub. See [Brand & logo](/brand).
 
 ### Where is the source code, and is it open source?
 
