@@ -195,7 +195,7 @@ No. One project builds one app with one `app` declaration (a second one is error
 
 ### Is Cluub production ready?
 
-No. It's a **working prototype (0.1)**. The compiler, runtime and CLI work end to end, and the templates pass their tests, but:
+No. It's a **beta (0.1.0-beta.1)**. The compiler, runtime and CLI work end to end, and the templates pass their tests, but:
 
 * there's no auth, no database and no rate limiting,
 * runtime errors point to generated JavaScript,

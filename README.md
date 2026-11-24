@@ -80,6 +80,6 @@ Or let each user of your app bring theirs: set `aiKeys "user"` and add the built
 
 ## Status
 
-Cluub 0.1 is a working prototype. See [Status & roadmap](https://cluub-lang.github.io/reference/roadmap) for what's done and what's next, and [Contributing](https://cluub-lang.github.io/contributing) to help.
+Cluub 0.1 is in beta. See [Status & roadmap](https://cluub-lang.github.io/reference/roadmap) for what's done and what's next, and [Contributing](https://cluub-lang.github.io/contributing) to help.
 
 MIT licensed.

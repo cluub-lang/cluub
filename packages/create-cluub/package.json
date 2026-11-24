@@ -1,6 +1,6 @@
 {
   "name": "create-cluub",
-  "version": "0.1.0",
+  "version": "0.1.0-beta.1",
   "description": "Create a new Cluub app: npm create cluub@latest",
   "type": "module",
   "bin": {
@@ -11,7 +11,7 @@
     "README.md"
   ],
   "dependencies": {
-    "cluub": "^0.1.0"
+    "cluub": "^0.1.0-beta.1"
   },
   "engines": {
     "node": ">=18"

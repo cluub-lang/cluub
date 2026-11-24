@@ -2,7 +2,9 @@
 
 All notable changes to Cluub are documented here. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and Cluub uses [Semantic Versioning](https://semver.org/spec/v2.0.0.html). Before 1.0, minor versions may contain breaking changes to the language. Breaking changes will always be listed under **Changed** with a migration note.
 
-## [Unreleased]
+## [0.1.0-beta.1] - 2026-11-24
+
+First public beta.
 
 ### Changed
 - The language is now called **Cluub** (it *clubs* frontend, backend and AI). Files use the `.clb` extension, the command is `cluub`, and the npm packages are `cluub` and `create-cluub`. Environment variables use the `CLUUB_` prefix (for example `CLUUB_AI`).
