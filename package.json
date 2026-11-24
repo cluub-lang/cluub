@@ -31,7 +31,7 @@
     "./runtime/*": "./runtime/*",
     "./package.json": "./package.json"
   },
-  "homepage": "https://cluub.dev",
+  "homepage": "https://cluub-lang.github.io/home/",
   "keywords": [
     "cluub",
     "language",
@@ -45,9 +45,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rushi-cluub/cluub.git"
+    "url": "git+https://github.com/cluub-lang/cluub.git"
   },
   "bugs": {
-    "url": "https://github.com/rushi-cluub/cluub/issues"
+    "url": "https://github.com/cluub-lang/cluub/issues"
   }
 }

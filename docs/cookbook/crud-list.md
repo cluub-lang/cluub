@@ -152,17 +152,17 @@ page Library at "/"
 
 ```cluub
 test "create, edit and delete a bookmark"
-  let saved = BookmarkService.create("Cluub docs", "https://cluub.dev")
-  let changed = BookmarkService.update(saved.id, "Cluub guide", "https://cluub.dev/guide")
+  let saved = BookmarkService.create("Cluub docs", "https://example.com")
+  let changed = BookmarkService.update(saved.id, "Cluub guide", "https://example.com/guide")
   expect changed.title is "Cluub guide"
   BookmarkService.remove(saved.id)
   expect BookmarkService.list() is empty
 
 test "links must be real web addresses"
-  expect BookmarkService.create("Docs", "cluub.dev") fails with "valid web address"
+  expect BookmarkService.create("Docs", "example.com") fails with "valid web address"
 
 test "editing a missing bookmark says so"
-  expect BookmarkService.update("99", "Docs", "https://cluub.dev") fails with "not found"
+  expect BookmarkService.update("99", "Docs", "https://example.com") fails with "not found"
 
 test "the api rejects a bad link and names the field"
   let response = request post "/api/bookmarks" with {title: "Docs", url: "nope"}
@@ -172,7 +172,7 @@ test "the api rejects a bad link and names the field"
 test "the page adds, edits and deletes"
   render Library
   type "Cluub docs" into "Title"
-  type "https://cluub.dev" into "https://"
+  type "https://example.com" into "https://"
   click "Add"
   expect screen has "Cluub docs"
   click "Edit"

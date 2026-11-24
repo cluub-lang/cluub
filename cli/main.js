@@ -259,7 +259,7 @@ function explainCmd() {
 
 function errorsCmd() {
   const code = args[0]?.toUpperCase();
-  if (code) { console.log(CODES[code] ? `${bold(code)}: ${CODES[code]}\nMore: docs/reference/errors.md` : red(`Unknown code ${code}.`)); return; }
+  if (code) { console.log(CODES[code] ? `${bold(code)}: ${CODES[code]}\nMore: https://cluub-lang.github.io/home/reference/errors#${code.toLowerCase()}` : red(`Unknown code ${code}.`)); return; }
   for (const [k, v] of Object.entries(CODES)) console.log(`${k.startsWith('E') ? red(k) : yellow(k)}  ${v}`);
 }
 

@@ -5,7 +5,7 @@ All notable changes to Cluub are documented here. The format follows [Keep a Cha
 ## [Unreleased]
 
 ### Changed
-- The language is now called **Cluub** (it *clubs* frontend, backend and AI). Files use the `.clb` extension, the command is `cluub`, the npm packages are `cluub` and `create-cluub`, and the home page is cluub.dev. Environment variables use the `CLUUB_` prefix (for example `CLUUB_AI`).
+- The language is now called **Cluub** (it *clubs* frontend, backend and AI). Files use the `.clb` extension, the command is `cluub`, and the npm packages are `cluub` and `create-cluub`. Environment variables use the `CLUUB_` prefix (for example `CLUUB_AI`).
 - New logo and brand colours (Okabe–Ito, colour-blind safe); the default app theme now uses the Cluub blue `#0072B2` (`#56B4E9` in dark mode).
 
 ### Added
@@ -13,7 +13,8 @@ All notable changes to Cluub are documented here. The format follows [Keep a Cha
 - Bring-your-own-key AI: the `cluub ai` command (`set`, `use`, `test`, `remove`, status) manages developer keys in `.env` (mode 600, git-ignored).
 - End-user keys: the `aiKeys` app setting (`"server"`, `"user"`, `"either"`), the built-in `aikey` view element and the `hasAiKey()` built-in. End-user keys stay in the browser, travel in `X-Cluub-AI-Provider` / `X-Cluub-AI-Key` headers, are scoped to one request with `AsyncLocalStorage`, and are never stored or logged.
 - New error response `401 ai_key_required` when a feature needs the end user's key.
-- Docs: [Your own AI keys](/guide/ai-keys), [Brand & logo](/brand), a larger FAQ, publishing instructions, `CNAME` and `_headers` for hosting at cluub.dev.
+- Docs: [Your own AI keys](/guide/ai-keys), [Brand & logo](/brand), a larger FAQ and publishing instructions.
+- The project lives at [github.com/cluub-lang/cluub](https://github.com/cluub-lang/cluub) and the docs are published by GitHub Pages at [cluub-lang.github.io/home](https://cluub-lang.github.io/home/) on every push to `main`.
 
 ## [Unreleased]
 

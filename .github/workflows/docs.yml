@@ -1,19 +1,18 @@
 name: Docs
-# Builds the documentation site and publishes it to GitHub Pages
-# (https://rushi-cluub.github.io/cluub/) on every push to main.
+# Builds the documentation and publishes it to https://cluub-lang.github.io/home/
+# by pushing the built site to the cluub-lang/home repository, which GitHub Pages serves.
 on:
   push:
     branches: [main]
   workflow_dispatch:
 permissions:
   contents: read
-  pages: write
-  id-token: write
 concurrency:
-  group: pages
+  group: docs
   cancel-in-progress: true
 jobs:
-  build:
+  publish:
+    if: github.repository == 'cluub-lang/cluub'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -27,17 +26,23 @@ jobs:
       - run: npm run build
         working-directory: docs
         env:
-          # Change to "/" once the site moves to https://cluub.dev
-          DOCS_BASE: /cluub/
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: docs/.vitepress/dist
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+          DOCS_BASE: /home/
+      - name: Publish to cluub-lang/home
+        env:
+          DEPLOY_KEY: ${{ secrets.DOCS_DEPLOY_KEY }}
+        run: |
+          mkdir -p ~/.ssh
+          printf '%s\n' "$DEPLOY_KEY" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -t ed25519 github.com >> ~/.ssh/known_hosts
+          git clone --depth 1 git@github.com:cluub-lang/home.git site
+          find site -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          cp -R docs/.vitepress/dist/. site/
+          touch site/.nojekyll
+          cd site
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then echo "Docs unchanged"; exit 0; fi
+          git commit -m "Publish docs from cluub-lang/cluub@${GITHUB_SHA::7}"
+          git push origin HEAD

@@ -37,7 +37,7 @@ Because it *clubs* frontend, backend and AI into one language. The logo is a clu
 
 ### Where is the source code, and is it open source?
 
-Cluub is MIT-licensed open source. The code lives at [github.com/rushi-cluub/cluub](https://github.com/rushi-cluub/cluub) and is published to npm as `cluub` and `create-cluub`.
+Cluub is MIT-licensed open source. The code lives at [github.com/cluub-lang/cluub](https://github.com/cluub-lang/cluub) and is published to npm as `cluub` and `create-cluub`.
 
 ## The language
 
@@ -210,7 +210,7 @@ The packages are ready to publish as **`cluub`** (the compiler and command) and 
 
 ### Where is the documentation hosted?
 
-At **[cluub.dev](https://cluub.dev)**. The site is built with VitePress into plain static files, so it can be hosted on any static host (Cloudflare Pages, GitHub Pages, Vercel, Netlify or your own server). See [Contributing](/contributing#publishing-the-docs-site).
+At **[cluub-lang.github.io/home](https://cluub-lang.github.io/home/)**, published free by GitHub Pages and rebuilt automatically on every change to the code. The site is plain static files built with VitePress, so you can also host a copy anywhere (see [Contributing](/contributing#publishing-the-docs-site)). See [Contributing](/contributing#publishing-the-docs-site).
 
 ### How do I report a bug or contribute?
 

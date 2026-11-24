@@ -49,7 +49,7 @@ async function main() {
   console.log(`Next steps:\n\n  cd ${name}\n  ${pm} install\n  ${run('dev')}\n`);
   console.log(`Then open ${cyan('http://localhost:3000')}. Edit any .clb file and the page reloads.`);
   if (template !== 'blank') console.log(`AI features use ${bold('your own key')}: ${cyan('npx cluub ai set claude')} (or openai / gemini).`);
-  console.log(`\nDocs: ${cyan('https://cluub.dev')}\n`);
+  console.log(`\nDocs: ${cyan('https://cluub-lang.github.io/home/')}\n`);
 }
 
 main().catch((e) => { console.error(red(`✗ ${e.message}`)); exit(1); });

@@ -171,22 +171,20 @@ Publish `cluub` first: `create-cluub` depends on it. To try the packages without
 
 ## Publishing the docs site
 
-The site is static. Build it with:
+The documentation is published at **https://cluub-lang.github.io/home/** by GitHub Pages, automatically:
+
+1. On every push to `main` in `cluub-lang/cluub`, the **Docs** workflow (`.github/workflows/docs.yml`) builds the site with `DOCS_BASE=/home/`.
+2. It pushes the built files to the `cluub-lang/home` repository, using a deploy key that can write to that one repository only (stored as the `DOCS_DEPLOY_KEY` secret in `cluub-lang/cluub`).
+3. GitHub Pages serves `cluub-lang/home` at `https://cluub-lang.github.io/home/`.
+
+To build the site yourself:
 
 ```bash
-cd docs && npm install && npm run build    # output: docs/.vitepress/dist
+cd docs && npm install && npm run build                         # for a host at the root: /
+cd docs && npm install && DOCS_BASE=/home/ npm run build        # the same paths as GitHub Pages
 ```
 
-Any static host works. Point **cluub.dev** at it once the domain is registered:
-
-| Host | Build command | Output folder | Notes |
-|---|---|---|---|
-| Cloudflare Pages | `cd docs && npm install && npm run build` | `docs/.vitepress/dist` | Add `cluub.dev` under *Custom domains*. `docs/public/_headers` is applied automatically. |
-| Netlify | same | same | Add the domain under *Domain management*. `_headers` is applied automatically. |
-| Vercel | same | same | Add the domain under *Settings → Domains*. |
-| GitHub Pages | `.github/workflows/docs.yml` (already set up) | `docs/.vitepress/dist` | Publishes https://rushi-cluub.github.io/cluub/ on every push to `main`, built with `DOCS_BASE=/cluub/`. To move it to cluub.dev, set the custom domain in *Settings → Pages* and change `DOCS_BASE` to `/` in the workflow. |
-
-After DNS is set, check that `https://cluub.dev` serves the home page and that `/playground` works on a hard refresh (all hosts above handle VitePress clean URLs).
+The output in `docs/.vitepress/dist` is plain static files, so a copy can be hosted anywhere (Netlify and Cloudflare Pages also apply `docs/public/_headers`). After a deploy, check that the home page loads and that `/playground` works on a hard refresh.
 
 ## See also
 

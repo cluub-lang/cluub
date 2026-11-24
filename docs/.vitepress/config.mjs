@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
-// '/' for cluub.dev; the GitHub Pages workflow builds with DOCS_BASE=/cluub/ for rushi-cluub.github.io/cluub/
+// '/' for local development; the Docs workflow builds with DOCS_BASE=/home/ for https://cluub-lang.github.io/home/
 const base = process.env.DOCS_BASE || '/';
 const cluubGrammar = JSON.parse(readFileSync(path.resolve(here, '../../editors/cluub.tmLanguage.json'), 'utf8'));
 
@@ -19,9 +19,9 @@ export default defineConfig({
     ['meta', { name: 'theme-color', content: '#0072B2' }],
     ['link', { rel: 'icon', type: 'image/svg+xml', href: `${base}favicon.svg` }],
     ['meta', { property: 'og:title', content: 'Cluub: one language for frontend, backend and AI' }],
-    ['meta', { property: 'og:image', content: 'https://cluub.dev/logo-full.svg' }],
+    ['meta', { property: 'og:image', content: 'https://cluub-lang.github.io/home/logo-full.svg' }],
   ],
-  sitemap: { hostname: 'https://cluub.dev' },
+  sitemap: { hostname: 'https://cluub-lang.github.io/home/' },
   markdown: { languages: [cluubGrammar] },
   vite: { server: { fs: { allow: [path.resolve(here, '../..')] } } },
   themeConfig: {
@@ -153,10 +153,10 @@ export default defineConfig({
         ] },
       ],
     },
-    socialLinks: [{ icon: 'github', link: 'https://github.com/rushi-cluub/cluub' }],
-    editLink: { pattern: 'https://github.com/rushi-cluub/cluub/edit/main/docs/:path', text: 'Edit this page on GitHub' },
+    socialLinks: [{ icon: 'github', link: 'https://github.com/cluub-lang/cluub' }],
+    editLink: { pattern: 'https://github.com/cluub-lang/cluub/edit/main/docs/:path', text: 'Edit this page on GitHub' },
     search: { provider: 'local' },
     outline: { level: [2, 3] },
-    footer: { message: 'MIT licensed · zero dependencies · bring your own AI key', copyright: 'Cluub 0.1 (prototype) · cluub.dev' },
+    footer: { message: 'MIT licensed · zero dependencies · bring your own AI key', copyright: 'Cluub 0.1 (prototype)' },
   },
 });
