@@ -5,7 +5,13 @@
 <p align="center"><b>One structured language that clubs together frontend, backend and AI.</b><br>
 Zero dependencies · bring your own AI key · tests that write themselves</p>
 
-<p align="center"><a href="https://cluub-lang.github.io/">Documentation</a> · <a href="https://cluub-lang.github.io/guide/tour">10-minute tour</a> · <a href="https://cluub-lang.github.io/playground">Playground</a> · <a href="https://github.com/cluub-lang/cluub/issues">Issues</a></p>
+<p align="center">
+  <a href="https://www.npmjs.com/package/@cluub-lang/cluub"><img src="https://img.shields.io/npm/v/@cluub-lang/cluub?label=npm&color=0072B2" alt="npm version"></a>
+  <a href="https://github.com/cluub-lang/cluub/actions/workflows/ci.yml"><img src="https://github.com/cluub-lang/cluub/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-009E73" alt="MIT licence"></a>
+</p>
+
+<p align="center"><a href="https://cluub-lang.github.io/">Documentation</a> · <a href="https://cluub-lang.github.io/guide/tour">10-minute tour</a> · <a href="https://cluub-lang.github.io/playground">Playground</a> · <a href="https://www.npmjs.com/package/@cluub-lang/cluub">npm</a> · <a href="https://github.com/cluub-lang/cluub/issues">Issues</a></p>
 
 ---
 
@@ -49,7 +55,7 @@ npm install
 npm run dev
 ```
 
-Or install the command globally: `npm install -g cluub`, then `cluub new my-app`. Requires Node.js 18+.
+Or install the command globally: `npm install -g @cluub-lang/cluub`, then `cluub new my-app`. Requires Node.js 18+.
 
 ## Bring your own AI key
 
@@ -80,6 +86,6 @@ Or let each user of your app bring theirs: set `aiKeys "user"` and add the built
 
 ## Status
 
-Cluub 0.1 is a working prototype. See [Status & roadmap](https://cluub-lang.github.io/reference/roadmap) for what's done and what's next, and [Contributing](https://cluub-lang.github.io/contributing) to help.
+Cluub 0.1 is in beta. See [Status & roadmap](https://cluub-lang.github.io/reference/roadmap) for what's done and what's next, and [Contributing](https://cluub-lang.github.io/contributing) to help.
 
 MIT licensed.

@@ -1,0 +1,2 @@
+store Todos holds Todo saved in "storage/todos.json"
+  about "All todos, saved to a JSON file (swap for a database later without touching services)"

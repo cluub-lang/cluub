@@ -1,0 +1,17 @@
+test "a new todo starts not done"
+  let todo = TodoService.add("Buy milk")
+  expect todo.done is false
+
+test "toggling finishes a todo"
+  let todo = TodoService.add("Buy milk")
+  let done = TodoService.toggle(todo.id)
+  expect done.done is true
+
+test "toggling a missing todo says so"
+  expect TodoService.toggle("42") fails with "not found"
+
+test "a user can add a todo from the home page"
+  render Home
+  type "Call the bank" into "Add a todo"
+  click "Add"
+  expect screen has "Call the bank"

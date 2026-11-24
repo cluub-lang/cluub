@@ -1,6 +1,6 @@
 # Status & roadmap
 
-Cluub 0.1 is a **working prototype**. Here is exactly what exists today and what comes next.
+Cluub 0.1 is in **beta**. Here is exactly what exists today and what comes next.
 
 ## Working today
 
@@ -27,13 +27,40 @@ Cluub 0.1 is a **working prototype**. Here is exactly what exists today and what
 * Components are stateless by design; page state covers most needs.
 * No auth, sessions, file uploads or websockets yet.
 
-## Next
+## Road to 1.0 (enterprise-ready)
 
-1. **Language server + VS Code extension**: inline errors, the same suggestions as `cluub check`, completion and hover docs (the grammar in `editors/` is the first piece).
-2. **Full static types** with inference, so wrong field access is caught before running.
-3. **Database stores**: `store Orders holds Order in postgres` / `sqlite`, with migrations generated from models.
-4. **Auth**: `page Admin at "/admin" for role "admin"`, plus sessions and OAuth.
-5. **AI tools and agents**: `ai agent Support uses OrderService`, giving the AI safe, typed access to service actions, plus streaming replies in the UI.
-6. **Native compiler in Rust** (same language, much faster for very large projects) and a single-binary install.
-7. **Formatter** (`cluub fmt`) that also normalizes dictated code.
-8. **Deploy targets**: static frontend + serverless backend, Docker, edge.
+### UI and components
+Today Cluub renders its built-in elements (`button`, `card`, `row`, `input`…) with a small hand-written virtual DOM and **plain CSS** (one theme file with variables, light/dark mode, the brand palette). There is no Tailwind and no component library yet.
+1. **Cluub UI kit**: accessible, themeable ready-made components in the spirit of MUI, Chakra and shadcn/ui: data table (sort, filter, paginate), modal, drawer, tabs, menu, toast, date picker, autocomplete, file upload, charts, form builder with field errors.
+2. **Component state** and slots for custom components.
+3. **Styling options**: design tokens, multiple themes, optional Tailwind-style utility classes, CSS modules.
+4. Routing extras: nested routes, route guards, query parameters, code splitting.
+
+### Data
+5. **Database stores**: `store Orders holds Order in postgres | mysql | sqlite | mongodb`, with migrations generated from models, indexes, transactions and seeding.
+6. **Choose a database when creating an app**: `npm create cluub` asks SQL (PostgreSQL, MySQL, SQLite) or NoSQL (MongoDB) or none, writes the connection config and a Docker Compose service for it.
+
+### Robustness
+7. **Full static type checker** with inference: wrong field access, wrong return types and nothing-safety caught at compile time.
+8. **Source maps**, so runtime errors point to the `.clb` line.
+9. **Formatter** (`cluub fmt`), plus a **language server** and **VS Code extension** with inline errors, completion, hover docs and rename.
+10. **Auto-correct**: `cluub fix` applies safe fixes for diagnostics (spelling suggestions, missing `uses`, naming, layer moves); `cluub dev --fix` and **fix on save** in the editor extension; a "auto-fix on save" choice when creating an app.
+11. Fuzz and property tests for the compiler, a conformance test suite, mutation testing of generated tests, coverage reports.
+12. Stable language specification, semantic versioning, deprecation policy and migration tool (`cluub migrate`).
+
+### Security
+13. **Authentication and authorization**: sessions, OAuth/OIDC (Google, Microsoft, Okta), roles and permissions declared in the language (`page Admin ... for role "admin"`).
+14. CSRF tokens for cookie sessions, rate limiting, request size and timeout policies, configurable CORS.
+15. Secrets from cloud vaults (AWS Secrets Manager, Azure Key Vault, GCP Secret Manager); audit logging.
+16. Security hardening: independent security audit, threat model, signed releases and npm provenance, SBOM, dependency-free supply chain kept by policy.
+
+### Operations
+17. **Docker**: `cluub build --docker` (multi-stage, non-root image) and generated `docker-compose.yml` with the chosen database.
+18. **CI/CD**: generated GitHub Actions / GitLab CI / Azure Pipelines that run `cluub check`, `cluub test` and deploy.
+19. **Cloud deploy**: `cluub deploy` targets for AWS, Azure, Google Cloud, Vercel, Fly.io and Kubernetes (Helm chart).
+20. Observability: structured logs, health and readiness routes, metrics (Prometheus/OpenTelemetry), tracing.
+21. Performance: clustering, caching, streaming AI replies, websockets, background jobs and scheduled tasks.
+
+### AI
+22. AI tools and agents with typed, permissioned access to service actions; streaming replies in the UI; usage and cost limits per user key.
+

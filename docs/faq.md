@@ -195,7 +195,7 @@ No. One project builds one app with one `app` declaration (a second one is error
 
 ### Is Cluub production ready?
 
-No. It's a **working prototype (0.1)**. The compiler, runtime and CLI work end to end, and the templates pass their tests, but:
+No. It's a **beta (0.1.0-beta.1)**. The compiler, runtime and CLI work end to end, and the templates pass their tests, but:
 
 * there's no auth, no database and no rate limiting,
 * runtime errors point to generated JavaScript,
@@ -206,7 +206,7 @@ Use it for prototypes, internal tools and learning. If you deploy, follow the ch
 
 ### Is it on npm?
 
-The packages are ready to publish as **`cluub`** (the compiler and command) and **`create-cluub`** (for `npm create cluub@latest`). Until they're published, install from the source folder with `npm link` ([Install](/guide/install)).
+Yes. Two packages are published: **[`@cluub-lang/cluub`](https://www.npmjs.com/package/@cluub-lang/cluub)** (the compiler, runtime and the `cluub` command) and **[`create-cluub`](https://www.npmjs.com/package/create-cluub)** (for `npm create cluub@latest`). The main package is scoped because npm doesn't allow the plain name `cluub`, which it considers too close to existing packages; the command is still `cluub`. See [Install](/guide/install).
 
 ### Where is the documentation hosted?
 
