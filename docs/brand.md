@@ -1,3 +1,7 @@
+<script setup>
+import { withBase } from 'vitepress'
+</script>
+
 # Brand & logo
 
 Cluub *clubs together* the frontend, the backend and AI. The logo says exactly that: a club (♣) made of **three circles**, one for each part, joined on a single stem.
@@ -7,12 +11,12 @@ Cluub *clubs together* the frontend, the backend and AI. The logo says exactly t
 All files are plain SVG in the repository's `docs/public/` folder and are served from this site.
 
 <div class="brand-logos">
-  <figure><img src="/logo-full.svg" alt="Cluub logo with wordmark, for light backgrounds"><figcaption><code>/logo-full.svg</code> · light backgrounds</figcaption></figure>
-  <figure class="on-dark"><img src="/logo-full-dark.svg" alt="Cluub logo with wordmark, for dark backgrounds"><figcaption><code>/logo-full-dark.svg</code> · dark backgrounds</figcaption></figure>
-  <figure><img src="/logo.svg" alt="Cluub mark, for light backgrounds"><figcaption><code>/logo.svg</code> · mark only</figcaption></figure>
-  <figure class="on-dark"><img src="/logo-dark.svg" alt="Cluub mark, for dark backgrounds"><figcaption><code>/logo-dark.svg</code> · mark on dark</figcaption></figure>
-  <figure><img src="/wordmark.svg" alt="Cluub wordmark"><figcaption><code>/wordmark.svg</code> · wordmark only</figcaption></figure>
-  <figure><img src="/favicon.svg" alt="Cluub favicon"><figcaption><code>/favicon.svg</code> · adapts to dark mode</figcaption></figure>
+  <figure><img :src="withBase('/logo-full.svg')" alt="Cluub logo with wordmark, for light backgrounds"><figcaption><code>/logo-full.svg</code> · light backgrounds</figcaption></figure>
+  <figure class="on-dark"><img :src="withBase('/logo-full-dark.svg')" alt="Cluub logo with wordmark, for dark backgrounds"><figcaption><code>/logo-full-dark.svg</code> · dark backgrounds</figcaption></figure>
+  <figure><img :src="withBase('/logo.svg')" alt="Cluub mark, for light backgrounds"><figcaption><code>/logo.svg</code> · mark only</figcaption></figure>
+  <figure class="on-dark"><img :src="withBase('/logo-dark.svg')" alt="Cluub mark, for dark backgrounds"><figcaption><code>/logo-dark.svg</code> · mark on dark</figcaption></figure>
+  <figure><img :src="withBase('/wordmark.svg')" alt="Cluub wordmark"><figcaption><code>/wordmark.svg</code> · wordmark only</figcaption></figure>
+  <figure><img :src="withBase('/favicon.svg')" alt="Cluub favicon"><figcaption><code>/favicon.svg</code> · adapts to dark mode</figcaption></figure>
 </div>
 
 The wordmark is drawn with simple strokes (no font), so it looks identical everywhere and needs no font licence.

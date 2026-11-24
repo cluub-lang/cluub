@@ -4,17 +4,20 @@ import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
+// '/' for cluub.dev; the GitHub Pages workflow builds with DOCS_BASE=/cluub/ for rushi-cluub.github.io/cluub/
+const base = process.env.DOCS_BASE || '/';
 const cluubGrammar = JSON.parse(readFileSync(path.resolve(here, '../../editors/cluub.tmLanguage.json'), 'utf8'));
 
 export default defineConfig({
   title: 'Cluub',
   description: 'One structured, AI-native language for frontend and backend.',
+  base,
   cleanUrls: true,
   ignoreDeadLinks: 'localhostLinks',
   lastUpdated: false,
   head: [
     ['meta', { name: 'theme-color', content: '#0072B2' }],
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: `${base}favicon.svg` }],
     ['meta', { property: 'og:title', content: 'Cluub: one language for frontend, backend and AI' }],
     ['meta', { property: 'og:image', content: 'https://cluub.dev/logo-full.svg' }],
   ],

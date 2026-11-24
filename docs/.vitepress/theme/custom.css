@@ -17,7 +17,7 @@ div.language-cluub { position: relative; }
 .cluub-try { position: absolute; right: 10px; bottom: 8px; font-size: 12px; font-weight: 600; padding: 2px 10px; border-radius: 6px; background: var(--vp-c-brand-1); color: #fff !important; text-decoration: none !important; opacity: .9; z-index: 2; }
 .dark .cluub-try { color: #0B1220 !important; }
 .cluub-try:hover { opacity: 1; }
-.vp-doc img[src^="/diagrams/"] { width: 100%; max-width: 760px; margin: 16px 0; }
+.vp-doc img[src*="/diagrams/"] { width: 100%; max-width: 760px; margin: 16px 0; }
 .brand-swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; margin: 16px 0; }
 .brand-swatches div { border-radius: 10px; padding: 14px; font-size: 13px; line-height: 1.4; border: 1px solid var(--vp-c-divider); }
 .brand-logos { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; margin: 16px 0; }

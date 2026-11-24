@@ -1,5 +1,5 @@
 import DefaultTheme from 'vitepress/theme';
-import { useRoute } from 'vitepress';
+import { useRoute, withBase } from 'vitepress';
 import { onMounted, watch, nextTick } from 'vue';
 import Playground from './Playground.vue';
 import './custom.css';
@@ -18,7 +18,7 @@ async function addPlaygroundButtons() {
     const a = document.createElement('a');
     a.className = 'cluub-try';
     a.textContent = '▶ Run in playground';
-    a.href = '/playground#code=' + btoa(unescape(encodeURIComponent(code)));
+    a.href = withBase('/playground') + '#code=' + btoa(unescape(encodeURIComponent(code)));
     a.setAttribute('aria-label', 'Open this example in the playground');
     block.appendChild(a);
   }

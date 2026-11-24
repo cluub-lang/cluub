@@ -184,7 +184,7 @@ Any static host works. Point **cluub.dev** at it once the domain is registered:
 | Cloudflare Pages | `cd docs && npm install && npm run build` | `docs/.vitepress/dist` | Add `cluub.dev` under *Custom domains*. `docs/public/_headers` is applied automatically. |
 | Netlify | same | same | Add the domain under *Domain management*. `_headers` is applied automatically. |
 | Vercel | same | same | Add the domain under *Settings → Domains*. |
-| GitHub Pages | build in a workflow, upload `docs/.vitepress/dist` | | `docs/public/CNAME` already contains `cluub.dev`. |
+| GitHub Pages | `.github/workflows/docs.yml` (already set up) | `docs/.vitepress/dist` | Publishes https://rushi-cluub.github.io/cluub/ on every push to `main`, built with `DOCS_BASE=/cluub/`. To move it to cluub.dev, set the custom domain in *Settings → Pages* and change `DOCS_BASE` to `/` in the workflow. |
 
 After DNS is set, check that `https://cluub.dev` serves the home page and that `/playground` works on a hard refresh (all hosts above handle VitePress clean URLs).
 
