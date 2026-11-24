@@ -41,7 +41,11 @@ Cluub uses the **Okabe–Ito palette**, a set of colours designed to stay distin
   <div style="background:#009E73;color:#fff"><b>Green #009E73</b><br>Accents</div>
   <div style="background:#1E293B;color:#fff"><b>Ink #1E293B</b><br>Letters, text</div>
   <div style="background:#56B4E9;color:#0B1220"><b>Sky #56B4E9</b><br>Brand colour on dark</div>
+  <div style="background:#CC79A7;color:#1E293B"><b>Reddish purple #CC79A7</b><br>AI in diagrams</div>
+  <div style="background:#A84B00;color:#fff"><b>Deep vermillion #A84B00</b><br>Errors (shade of #D55E00)</div>
 </div>
+
+The same palette is used everywhere: the logo, this site, the diagrams, the playground and the default theme of every Cluub app. Text on a coloured background is white on blue and deep vermillion, and ink `#1E293B` on sky, green, orange and reddish purple, all at 4.3 : 1 or more.
 
 | Token | Hex | Used for | Contrast (measured) |
 |---|---|---|---|
@@ -50,6 +54,8 @@ Cluub uses the **Okabe–Ito palette**, a set of colours designed to stay distin
 | Green | `#009E73` | Accents in the docs | Decorative |
 | Ink | `#1E293B` | Letters, body text | 14.6 : 1 on white |
 | Sky | `#56B4E9` | Links and buttons on dark backgrounds | 7.4 : 1 on `#1B1B1F` |
+| Reddish purple | `#CC79A7` | AI in diagrams | Ink text on it: 4.8 : 1 |
+| Deep vermillion | `#A84B00` | Error messages and toasts (a darker shade of Okabe–Ito vermillion `#D55E00`) | White text on it: 5.7 : 1 |
 | Light ink | `#F1F5F9` | Letters on dark backgrounds | 15.7 : 1 on `#1B1B1F` |
 
 Every part of the logo that carries meaning (face, the white **uu** eyes, letters) has at least 3 : 1 contrast against what's behind it, the WCAG level for graphics.

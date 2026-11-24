@@ -1,11 +1,11 @@
 /* Cluub default theme: clean, accessible, light + dark. Override any token in theme.css of your project. */
 :root {
-  --bg: #fafaf9; --surface: #ffffff; --text: #1c1917; --muted: #78716c; --border: #e7e5e4; --control-border: #8a8580;
-  --primary: #0072B2; --primary-text: #ffffff; --danger: #dc2626; --success: #16a34a;
+  --bg: #F8FAFC; --surface: #ffffff; --text: #1E293B; --muted: #78716c; --border: #e7e5e4; --control-border: #8a8580;
+  --primary: #0072B2; --primary-text: #ffffff; --danger: #A84B00; --success: #009E73;
   --radius: 10px; --gap: 12px; --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 @media (prefers-color-scheme: dark) {
-  :root { --bg: #0c0a09; --surface: #1c1917; --text: #f5f5f4; --muted: #a8a29e; --border: #292524; --control-border: #78716c; --primary: #56B4E9; --primary-text: #0B1220; }
+  :root { --bg: #0F172A; --surface: #1E293B; --text: #F1F5F9; --muted: #a8a29e; --border: #292524; --control-border: #78716c; --primary: #56B4E9; --primary-text: #0B1220; }
 }
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.55 var(--font); }

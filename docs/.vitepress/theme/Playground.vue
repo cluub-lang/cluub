@@ -181,7 +181,7 @@ onMounted(() => {
 .pg-editor { display: flex; border-right: 1px solid var(--vp-c-divider); background: #0f0f14; min-width: 0; }
 .pg-gutter { margin: 0; padding: 12px 8px; color: #555; font: 13px/20px var(--vp-font-family-mono); text-align: right; user-select: none; overflow: hidden; min-width: 40px; background: #0b0b0f; }
 .pg-gutter span { display: block; }
-.pg-gutter span.err { color: #f87171; font-weight: 700; }
+.pg-gutter span.err { color: #D55E00; font-weight: 700; }
 .pg-editor textarea { flex: 1; resize: none; border: 0; outline: none; padding: 12px; background: transparent; color: #e5e7eb; font: 13px/20px var(--vp-font-family-mono); white-space: pre; overflow: auto; tab-size: 2; }
 .pg-out { display: flex; flex-direction: column; min-width: 0; }
 .pg-tabs { display: flex; border-bottom: 1px solid var(--vp-c-divider); overflow-x: auto; }

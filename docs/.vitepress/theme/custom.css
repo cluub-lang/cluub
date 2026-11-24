@@ -9,7 +9,7 @@
 .dark {
   --vp-c-brand-1: #56B4E9; --vp-c-brand-2: #8ACBF0; --vp-c-brand-3: #56B4E9; --vp-c-brand-soft: rgba(86, 180, 233, 0.16);
   --vp-button-brand-bg: #56B4E9; --vp-button-brand-hover-bg: #8ACBF0; --vp-button-brand-active-bg: #3FA3DC; --vp-button-brand-text: #0B1220;
-  --vp-home-hero-name-background: linear-gradient(110deg, #56B4E9 10%, #2BC48E 55%, #F0B429 95%);
+  --vp-home-hero-name-background: linear-gradient(110deg, #56B4E9 10%, #009E73 55%, #E69F00 95%);
 }
 .VPDoc.has-aside .content-container { max-width: 760px; }
 

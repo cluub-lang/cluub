@@ -18,12 +18,12 @@ Use three tools, from broadest to most specific:
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
 
 :root {
-  --primary: #0f766e; --primary-text: #ffffff;
+  --primary: #007A5C; --primary-text: #ffffff;
   --radius: 6px; --gap: 16px;
   --font: "Inter", ui-sans-serif, system-ui, sans-serif;
 }
 @media (prefers-color-scheme: dark) {
-  :root { --primary: #2dd4bf; --primary-text: #042f2e; }
+  :root { --primary: #009E73; --primary-text: #1E293B; }
 }
 
 header img { height: 28px; border-radius: 0; }
@@ -35,7 +35,7 @@ header img { height: 28px; border-radius: 0; }
 **`assets/logo.svg`**
 
 ```xml
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><circle cx="16" cy="16" r="14" fill="#0f766e"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><circle cx="16" cy="16" r="14" fill="#007A5C"/></svg>
 ```
 
 **`ui/layouts/main.clb`**
