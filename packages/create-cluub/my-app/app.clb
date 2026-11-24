@@ -1,0 +1,4 @@
+app MyApp
+  about "A full-stack starter: todos with an AI summary"
+  port 3000
+  ai "claude"

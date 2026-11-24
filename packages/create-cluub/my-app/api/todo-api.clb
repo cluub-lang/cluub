@@ -1,0 +1,18 @@
+api TodoApi at "/api/todos"
+  about "HTTP endpoints for todos"
+  uses TodoService
+
+  get list at "/"
+    return TodoService.list()
+
+  post add at "/" with title: text, priority: text = "normal"
+    return TodoService.add(title, priority)
+
+  post toggle at "/{id}/toggle"
+    return TodoService.toggle(id)
+
+  delete remove at "/{id}"
+    TodoService.remove(id)
+
+  get summary at "/summary"
+    return TodoService.summary()

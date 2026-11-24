@@ -156,7 +156,10 @@ export default defineConfig({
         ] },
       ],
     },
-    socialLinks: [{ icon: 'github', link: 'https://github.com/cluub-lang/cluub' }],
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/cluub-lang/cluub' },
+      { icon: 'npm', link: 'https://www.npmjs.com/package/@cluub-lang/cluub', ariaLabel: 'Cluub on npm' },
+    ],
     editLink: { pattern: 'https://github.com/cluub-lang/cluub/edit/main/docs/:path', text: 'Edit this page on GitHub' },
     search: { provider: 'local' },
     outline: { level: [2, 3] },

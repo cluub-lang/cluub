@@ -5,7 +5,13 @@
 <p align="center"><b>One structured language that clubs together frontend, backend and AI.</b><br>
 Zero dependencies · bring your own AI key · tests that write themselves</p>
 
-<p align="center"><a href="https://cluub-lang.github.io/">Documentation</a> · <a href="https://cluub-lang.github.io/guide/tour">10-minute tour</a> · <a href="https://cluub-lang.github.io/playground">Playground</a> · <a href="https://github.com/cluub-lang/cluub/issues">Issues</a></p>
+<p align="center">
+  <a href="https://www.npmjs.com/package/@cluub-lang/cluub"><img src="https://img.shields.io/npm/v/@cluub-lang/cluub?label=npm&color=0072B2" alt="npm version"></a>
+  <a href="https://github.com/cluub-lang/cluub/actions/workflows/ci.yml"><img src="https://github.com/cluub-lang/cluub/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-009E73" alt="MIT licence"></a>
+</p>
+
+<p align="center"><a href="https://cluub-lang.github.io/">Documentation</a> · <a href="https://cluub-lang.github.io/guide/tour">10-minute tour</a> · <a href="https://cluub-lang.github.io/playground">Playground</a> · <a href="https://www.npmjs.com/package/@cluub-lang/cluub">npm</a> · <a href="https://github.com/cluub-lang/cluub/issues">Issues</a></p>
 
 ---
 

@@ -1,0 +1,10 @@
+component TodoItem
+  about "One todo in the list"
+  takes todo: Todo, onToggle: action, onRemove: action
+  view
+    card
+      row
+        checkbox todo.done, label "Done: {todo.title}", on change onToggle(todo.id)
+        text todo.title
+        badge todo.priority
+        button "Delete", label "Delete {todo.title}", on click onRemove(todo.id), style ghost

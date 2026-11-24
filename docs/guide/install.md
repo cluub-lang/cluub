@@ -57,6 +57,8 @@ cluub dev
 
 With the global command you can skip `npm install` in each project; inside a project, `npx cluub …` also works.
 
+Both packages are on npm: [`@cluub-lang/cluub`](https://www.npmjs.com/package/@cluub-lang/cluub) (the compiler, runtime and `cluub` command) and [`create-cluub`](https://www.npmjs.com/package/create-cluub) (used by `npm create cluub`).
+
 ::: tip Working on Cluub itself
 To try a local copy of the compiler, run `npm link` inside the `cluub` repository folder, then use `cluub new my-app`.
 :::

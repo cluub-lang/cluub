@@ -1,0 +1,15 @@
+{
+  "name": "my-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "cluub dev",
+    "test": "cluub test",
+    "build": "cluub build",
+    "start": "cluub start",
+    "check": "cluub check"
+  },
+  "devDependencies": {
+    "@cluub-lang/cluub": "^0.1.0-beta.1"
+  }
+}

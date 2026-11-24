@@ -1,0 +1,11 @@
+layout Main
+  about "Header and footer shared by every page"
+  view
+    header
+      link "MyApp" to "/"
+      nav
+        link "Todos" to "/"
+        link "About" to "/about"
+    slot
+    footer
+      text "Built with Cluub"

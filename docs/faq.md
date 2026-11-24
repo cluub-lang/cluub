@@ -206,7 +206,7 @@ Use it for prototypes, internal tools and learning. If you deploy, follow the ch
 
 ### Is it on npm?
 
-Yes. Two packages are published: **`@cluub-lang/cluub`** (the compiler, runtime and the `cluub` command) and **`create-cluub`** (for `npm create cluub@latest`). The main package is scoped because npm doesn't allow the plain name `cluub`, which it considers too close to existing packages; the command is still `cluub`. See [Install](/guide/install).
+Yes. Two packages are published: **[`@cluub-lang/cluub`](https://www.npmjs.com/package/@cluub-lang/cluub)** (the compiler, runtime and the `cluub` command) and **[`create-cluub`](https://www.npmjs.com/package/create-cluub)** (for `npm create cluub@latest`). The main package is scoped because npm doesn't allow the plain name `cluub`, which it considers too close to existing packages; the command is still `cluub`. See [Install](/guide/install).
 
 ### Where is the documentation hosted?
 

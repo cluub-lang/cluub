@@ -1,0 +1,29 @@
+service TodoService
+  about "Business rules for creating, finishing and summarizing todos"
+  uses Todos
+
+  action list() -> list of Todo
+    return Todos.all().sortBy(t => t.done)
+
+  action add(title: text, priority: text = "normal") -> Todo
+    about "Add a new todo"
+    require title is not empty, "Title is required"
+    require title.count >= 3, "Title must be at least 3 characters"
+    return Todos.add(Todo(title: title, priority: priority))
+
+  action toggle(id: text) -> Todo
+    about "Mark a todo as done or not done"
+    let todo = Todos.get(id)
+    return Todos.update(id, {done: not todo.done})
+
+  action remove(id: text)
+    about "Delete a todo"
+    Todos.remove(id)
+
+  action summary() -> text
+    about "Summarize open todos with AI"
+    let open = Todos.where(t => not t.done)
+    if open is empty
+      return "Nothing left to do. Nice work!"
+    let titles = open.map(t => t.title)
+    return ask ai "In one friendly sentence, summarize what I still need to do: {titles}"
