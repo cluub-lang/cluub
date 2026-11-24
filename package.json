@@ -31,7 +31,7 @@
     "./runtime/*": "./runtime/*",
     "./package.json": "./package.json"
   },
-  "homepage": "https://cluub-lang.github.io/home/",
+  "homepage": "https://cluub-lang.github.io/",
   "keywords": [
     "cluub",
     "language",

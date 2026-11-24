@@ -5,7 +5,7 @@
 <p align="center"><b>One structured language that clubs together frontend, backend and AI.</b><br>
 Zero dependencies · bring your own AI key · tests that write themselves</p>
 
-<p align="center"><a href="https://cluub-lang.github.io/home/">Documentation</a> · <a href="https://cluub-lang.github.io/home/guide/tour">10-minute tour</a> · <a href="https://cluub-lang.github.io/home/playground">Playground</a> · <a href="https://github.com/cluub-lang/cluub/issues">Issues</a></p>
+<p align="center"><a href="https://cluub-lang.github.io/">Documentation</a> · <a href="https://cluub-lang.github.io/guide/tour">10-minute tour</a> · <a href="https://cluub-lang.github.io/playground">Playground</a> · <a href="https://github.com/cluub-lang/cluub/issues">Issues</a></p>
 
 ---
 
@@ -60,7 +60,7 @@ cluub ai set claude     # or openai / gemini; local Ollama needs no key
 cluub ai test claude
 ```
 
-Or let each user of your app bring theirs: set `aiKeys "user"` and add the built-in `aikey` element. The key stays in their browser and is used only for their requests. See [Your own AI keys](https://cluub-lang.github.io/home/guide/ai-keys).
+Or let each user of your app bring theirs: set `aiKeys "user"` and add the built-in `aikey` element. The key stays in their browser and is used only for their requests. See [Your own AI keys](https://cluub-lang.github.io/guide/ai-keys).
 
 ## What's in this repository
 
@@ -71,13 +71,13 @@ Or let each user of your app bring theirs: set `aiKeys "user"` and add the built
 | `cli/` | the `cluub` command |
 | `packages/create-cluub/` | the `npm create cluub` package |
 | `templates/` | `app`, `ai-chat`, `blank` starters |
-| `docs/` | the [documentation site](https://cluub-lang.github.io/home/) (VitePress) with a live playground |
+| `docs/` | the [documentation site](https://cluub-lang.github.io/) (VitePress) with a live playground |
 | `editors/` | TextMate grammar for syntax highlighting |
 | `LANGUAGE.md` | the complete language reference (also what `cluub make` gives the AI) |
 | `tests/` | self-test: templates, examples, every docs sample, regressions (`npm test`) |
 
 ## Status
 
-Cluub 0.1 is a working prototype. See [Status & roadmap](https://cluub-lang.github.io/home/reference/roadmap) for what's done and what's next, and [Contributing](https://cluub-lang.github.io/home/contributing) to help.
+Cluub 0.1 is a working prototype. See [Status & roadmap](https://cluub-lang.github.io/reference/roadmap) for what's done and what's next, and [Contributing](https://cluub-lang.github.io/contributing) to help.
 
 MIT licensed.

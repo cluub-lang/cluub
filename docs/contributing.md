@@ -171,17 +171,17 @@ Publish `cluub` first: `create-cluub` depends on it. To try the packages without
 
 ## Publishing the docs site
 
-The documentation is published at **https://cluub-lang.github.io/home/** by GitHub Pages, automatically:
+The documentation is published at **https://cluub-lang.github.io/** by GitHub Pages, automatically:
 
-1. On every push to `main` in `cluub-lang/cluub`, the **Docs** workflow (`.github/workflows/docs.yml`) builds the site with `DOCS_BASE=/home/`.
-2. It pushes the built files to the `cluub-lang/home` repository, using a deploy key that can write to that one repository only (stored as the `DOCS_DEPLOY_KEY` secret in `cluub-lang/cluub`).
-3. GitHub Pages serves `cluub-lang/home` at `https://cluub-lang.github.io/home/`.
+1. On every push to `main` in `cluub-lang/cluub`, the **Docs** workflow (`.github/workflows/docs.yml`) builds the site.
+2. It pushes the built files to the `cluub-lang/cluub-lang.github.io` repository, using a deploy key that can write to that one repository only (stored as the `DOCS_DEPLOY_KEY` secret in `cluub-lang/cluub`).
+3. GitHub Pages serves `cluub-lang/cluub-lang.github.io` at `https://cluub-lang.github.io/` (a repository named `<org>.github.io` is published at the organization's root address).
 
 To build the site yourself:
 
 ```bash
-cd docs && npm install && npm run build                         # for a host at the root: /
-cd docs && npm install && DOCS_BASE=/home/ npm run build        # the same paths as GitHub Pages
+cd docs && npm install && npm run build                       # served at the root, like GitHub Pages
+cd docs && npm install && DOCS_BASE=/docs/ npm run build      # if you host a copy under a sub-path
 ```
 
 The output in `docs/.vitepress/dist` is plain static files, so a copy can be hosted anywhere (Netlify and Cloudflare Pages also apply `docs/public/_headers`). After a deploy, check that the home page loads and that `/playground` works on a hard refresh.

@@ -210,7 +210,7 @@ The packages are ready to publish as **`cluub`** (the compiler and command) and 
 
 ### Where is the documentation hosted?
 
-At **[cluub-lang.github.io/home](https://cluub-lang.github.io/home/)**, published free by GitHub Pages and rebuilt automatically on every change to the code. The site is plain static files built with VitePress, so you can also host a copy anywhere (see [Contributing](/contributing#publishing-the-docs-site)). See [Contributing](/contributing#publishing-the-docs-site).
+At **[cluub-lang.github.io](https://cluub-lang.github.io/)**, published free by GitHub Pages and rebuilt automatically on every change to the code. The site is plain static files built with VitePress, so you can also host a copy anywhere (see [Contributing](/contributing#publishing-the-docs-site)). See [Contributing](/contributing#publishing-the-docs-site).
 
 ### How do I report a bug or contribute?
 

@@ -14,7 +14,7 @@ All notable changes to Cluub are documented here. The format follows [Keep a Cha
 - End-user keys: the `aiKeys` app setting (`"server"`, `"user"`, `"either"`), the built-in `aikey` view element and the `hasAiKey()` built-in. End-user keys stay in the browser, travel in `X-Cluub-AI-Provider` / `X-Cluub-AI-Key` headers, are scoped to one request with `AsyncLocalStorage`, and are never stored or logged.
 - New error response `401 ai_key_required` when a feature needs the end user's key.
 - Docs: [Your own AI keys](/guide/ai-keys), [Brand & logo](/brand), a larger FAQ and publishing instructions.
-- The project lives at [github.com/cluub-lang/cluub](https://github.com/cluub-lang/cluub) and the docs are published by GitHub Pages at [cluub-lang.github.io/home](https://cluub-lang.github.io/home/) on every push to `main`.
+- The project lives at [github.com/cluub-lang/cluub](https://github.com/cluub-lang/cluub) and the docs are published by GitHub Pages at [cluub-lang.github.io](https://cluub-lang.github.io/) on every push to `main`.
 
 ## [Unreleased]
 

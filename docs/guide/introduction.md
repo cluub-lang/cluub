@@ -10,7 +10,7 @@ Today a web feature means learning JavaScript, TypeScript, React, a router, a st
 
 The logo makes the same point. It is a club (♣) made of three circles, one each for **frontend**, **backend** and **AI**, joined at the centre.
 
-Cluub files end in **`.clb`**, the command is **`cluub`**, the code lives at **[github.com/cluub-lang/cluub](https://github.com/cluub-lang/cluub)** and these docs at **[cluub-lang.github.io/home](https://cluub-lang.github.io/home/)**.
+Cluub files end in **`.clb`**, the command is **`cluub`**, the code lives at **[github.com/cluub-lang/cluub](https://github.com/cluub-lang/cluub)** and these docs at **[cluub-lang.github.io](https://cluub-lang.github.io/)**.
 
 ## Principles
 

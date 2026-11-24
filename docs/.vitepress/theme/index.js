@@ -28,6 +28,10 @@ export default {
   extends: DefaultTheme,
   enhanceApp({ app }) { app.component('Playground', Playground); },
   setup() {
+    // Old links under /home/ (the docs' previous address) go to the same page at the root.
+    if (typeof window !== 'undefined' && window.location.pathname.startsWith('/home/')) {
+      window.location.replace(window.location.pathname.slice(5) + window.location.search + window.location.hash);
+    }
     const route = useRoute();
     const run = () => nextTick(() => setTimeout(addPlaygroundButtons, 0));
     onMounted(run);

@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
-// '/' for local development; the Docs workflow builds with DOCS_BASE=/home/ for https://cluub-lang.github.io/home/
+// The site is served at the root of https://cluub-lang.github.io/. Set DOCS_BASE to host a copy under a sub-path.
 const base = process.env.DOCS_BASE || '/';
 const cluubGrammar = JSON.parse(readFileSync(path.resolve(here, '../../editors/cluub.tmLanguage.json'), 'utf8'));
 
@@ -19,9 +19,9 @@ export default defineConfig({
     ['meta', { name: 'theme-color', content: '#0072B2' }],
     ['link', { rel: 'icon', type: 'image/svg+xml', href: `${base}favicon.svg` }],
     ['meta', { property: 'og:title', content: 'Cluub: one language for frontend, backend and AI' }],
-    ['meta', { property: 'og:image', content: 'https://cluub-lang.github.io/home/logo-full.svg' }],
+    ['meta', { property: 'og:image', content: 'https://cluub-lang.github.io/logo-full.svg' }],
   ],
-  sitemap: { hostname: 'https://cluub-lang.github.io/home/' },
+  sitemap: { hostname: 'https://cluub-lang.github.io/' },
   markdown: { languages: [cluubGrammar] },
   vite: { server: { fs: { allow: [path.resolve(here, '../..')] } } },
   themeConfig: {

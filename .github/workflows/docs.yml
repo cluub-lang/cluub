@@ -1,6 +1,6 @@
 name: Docs
-# Builds the documentation and publishes it to https://cluub-lang.github.io/home/
-# by pushing the built site to the cluub-lang/home repository, which GitHub Pages serves.
+# Builds the documentation and publishes it to https://cluub-lang.github.io/
+# by pushing the built site to the cluub-lang/cluub-lang.github.io repository, which GitHub Pages serves.
 on:
   push:
     branches: [main]
@@ -25,9 +25,7 @@ jobs:
         working-directory: docs
       - run: npm run build
         working-directory: docs
-        env:
-          DOCS_BASE: /home/
-      - name: Publish to cluub-lang/home
+      - name: Publish to cluub-lang/cluub-lang.github.io
         env:
           DEPLOY_KEY: ${{ secrets.DOCS_DEPLOY_KEY }}
         run: |
@@ -35,7 +33,7 @@ jobs:
           printf '%s\n' "$DEPLOY_KEY" > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
           ssh-keyscan -t ed25519 github.com >> ~/.ssh/known_hosts
-          git clone --depth 1 git@github.com:cluub-lang/home.git site
+          git clone --depth 1 git@github.com:cluub-lang/cluub-lang.github.io.git site
           find site -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
           cp -R docs/.vitepress/dist/. site/
           touch site/.nojekyll
