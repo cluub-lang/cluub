@@ -1,9 +1,15 @@
 #!/usr/bin/env node
 // npm create cluub@latest [name] [--template app|ai-chat|blank]
 // Also works with: pnpm create cluub, yarn create cluub, bun create cluub.
-import readline from 'node:readline/promises';
-import { stdin, stdout, argv, env, exit } from 'node:process';
-import { createProject, validateName, TEMPLATES, VERSION } from 'cluub/new';
+import { stdin, stdout, argv, env, exit, versions } from 'node:process';
+
+// Check the Node version before loading anything that needs a modern Node.
+if (Number(versions.node.split('.')[0]) < 18) {
+  console.error(`Cluub needs Node.js 18 or newer, but this is Node ${versions.node}.\nInstall a newer version from https://nodejs.org (or run: nvm install 22 && nvm use 22), then try again.`);
+  exit(1);
+}
+const readline = await import('node:readline/promises');
+const { createProject, validateName, TEMPLATES, VERSION } = await import('cluub/new');
 
 const useColor = stdout.isTTY && !env.NO_COLOR;
 const paint = (code) => (s) => (useColor ? `\x1b[${code}m${s}\x1b[0m` : s);

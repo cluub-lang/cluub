@@ -5,7 +5,7 @@
 <p align="center"><b>One structured language that clubs together frontend, backend and AI.</b><br>
 Zero dependencies · bring your own AI key · tests that write themselves</p>
 
-<p align="center"><a href="https://cluub.dev">cluub.dev</a> · <a href="https://cluub.dev/guide/tour">10-minute tour</a> · <a href="https://cluub.dev/playground">Playground</a></p>
+<p align="center"><a href="https://cluub.dev">cluub.dev</a> · <a href="https://cluub.dev/guide/tour">10-minute tour</a> · <a href="https://cluub.dev/playground">Playground</a> · <a href="https://github.com/rushi-cluub/cluub/issues">Issues</a></p>
 
 ---
 

@@ -37,7 +37,7 @@ Because it *clubs* frontend, backend and AI into one language. The logo is a clu
 
 ### Where is the source code, and is it open source?
 
-Cluub is MIT-licensed open source. The code lives in its GitHub repository (linked from the top of this site) and is published to npm as `cluub` and `create-cluub`.
+Cluub is MIT-licensed open source. The code lives at [github.com/rushi-cluub/cluub](https://github.com/rushi-cluub/cluub) and is published to npm as `cluub` and `create-cluub`.
 
 ## The language
 

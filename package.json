@@ -42,5 +42,12 @@
     "ai",
     "llm",
     "byok"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rushi-cluub/cluub.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rushi-cluub/cluub/issues"
+  }
 }

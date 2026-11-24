@@ -150,6 +150,8 @@ export default defineConfig({
         ] },
       ],
     },
+    socialLinks: [{ icon: 'github', link: 'https://github.com/rushi-cluub/cluub' }],
+    editLink: { pattern: 'https://github.com/rushi-cluub/cluub/edit/main/docs/:path', text: 'Edit this page on GitHub' },
     search: { provider: 'local' },
     outline: { level: [2, 3] },
     footer: { message: 'MIT licensed · zero dependencies · bring your own AI key', copyright: 'Cluub 0.1 (prototype) · cluub.dev' },
