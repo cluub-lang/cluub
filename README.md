@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/public/logo-full.svg" alt="Cluub" height="96">
+  <img src="docs/public/logo-full.svg" alt="Cluub logo: the word cluub where the uu is a smiling cat" height="96">
 </p>
 
 <p align="center"><b>One structured language that clubs together frontend, backend and AI.</b><br>

@@ -5,7 +5,7 @@ hero:
   image:
     light: /logo-full.svg
     dark: /logo-full-dark.svg
-    alt: "Cluub logo, a club made of three circles for frontend, backend and AI"
+    alt: "Cluub logo, the word cluub where the uu is a smiling cat face"
   text: One language for frontend, backend and AI
   tagline: Write features in plain English-like code. Cluub builds the UI, the API, the tests and the AI calls, with zero dependencies.
   actions:
